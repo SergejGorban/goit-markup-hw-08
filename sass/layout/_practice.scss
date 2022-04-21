@@ -1,0 +1,39 @@
+.practice {
+    padding-top: 0;
+}
+
+.practice-container__title {
+    @include font (700, 36px, 1.17, 0.03em);
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 50px;
+}
+
+.practice-list {
+    display: flex;
+}
+
+.practice-list__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.practice-list__item {
+    position: relative;
+}
+
+.practice__wrap__text {
+    @include font (700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--btn-color);
+}
+
+.practice__wrap {
+    @extend %center-list;
+    position: absolute;
+    justify-content: center;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+}

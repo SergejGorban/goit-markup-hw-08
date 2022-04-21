@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,aAAa,CAAA,QAAC;EACd,YAAY,CAAA,QAAC;EACb,cAAc,CAAA,QAAC;EACf,WAAW,CAAA,QAAC;EACZ,YAAY,CAAA,QAAC;EACb,kBAAkB,CAAA,QAAC;EACnB,cAAc,CAAA,QAAC;EACf,UAAU,CAAA,MAAC;EACX,UAAU,CAAA,MAAC;EACX,OAAO,CAAA,6BAAC;CACX",
-    "sources": [
-        "../sass/utils/vars.scss"
-    ],
-    "names": [],
-    "file": "vars.css"
-}

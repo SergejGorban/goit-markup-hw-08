@@ -91,13 +91,6 @@ body {
           align-items: center;
 }
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -460,28 +453,66 @@ body {
 }
 
 .banners {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Hero.jpg");
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Hero-mob-1x.jpg");
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero-mob-1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 200px 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 118px 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .banners {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Hero-tab-1x.jpg");
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero-tab-1x.jpg");
+    padding: 118px 204px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banners {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Hero.jpg");
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 200px 0;
+  }
+}
+
+.baners-container {
+  text-align: center;
 }
 
 .baners-container__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   color: var(--btn-color);
-  margin-bottom: 30px;
-  max-width: 696px;
-  margin: auto;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .baners-container__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    margin: auto;
+    max-width: 696px;
+  }
 }
 
 .baners-container__btn {
@@ -496,15 +527,13 @@ body {
   color: var(--btn-color);
   min-width: 200px;
   min-height: 50px;
-  margin-left: 485px;
-  margin-right: 485px;
-  margin-top: 30px;
   padding: 0;
   border: none;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: var(--accent-color);
+  margin-top: 30px;
 }
 
 .advantages-list {

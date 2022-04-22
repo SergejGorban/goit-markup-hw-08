@@ -18,10 +18,24 @@
 
 .filter-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @include tab {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
     margin-bottom: 50px;
 }
 
-.filter__item:not(:last-child){
+.filter__item {
+    &:not(:last-child) {
     margin-right: 8px;
+    }
+    &:nth-child(-n+3) {
+        margin-bottom: 15px;
+    }
+}
+
+.filter-container {
+    display: block;
 }

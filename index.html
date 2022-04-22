@@ -37,7 +37,7 @@
         </div>
     </header> -->
     <main>
-        <section class=" container banners">
+        <section class="banners">
             <div class="baners-container">
                 <h1 class="baners-container__title">Эффективные решения для вашего бизнеса</h1>
                 <button class="baners-container__btn" type="button" data-modal-open >Заказать услугу</button>
@@ -86,7 +86,7 @@
                 </ul>
             </div>
         </section>
-        <!-- <section class="section practice">
+        <section class="section practice">
             <div class="container practice-container">
                 <h2 class="practice-container__title">Чем мы занимаемся</h2>
                 <ul class="list practice-list">
@@ -124,11 +124,24 @@
             <div class="container team-container">
                 <h2 class="team-container__title">Наша команда</h2>
                 <ul class="list team-list">
-                    <li class="team-list__item"><img class="img-title" 
-                        src="images/img-team-1.jpg" 
-                        alt="команда"
-                        width="270"
-                        height="260">
+                    <li class="team-list__item">
+                        <picture>
+                            <source srcset="./images/img-team-1-1x.jpg 1x,
+                                ./images/img-team-1-2x.jpg 2x" 
+                            media="(min-width: 1200px)"
+                            />
+                            <source srcset="./images/img-team-1-tab-1x.jpg 1x,
+                                ./images/img-team-1-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)"
+                            />
+                            <source srcset="./images/img-team-1-mob-1x.jpg 1x,
+                                ./images/img-team-1-mob-2x.jpg 2x" 
+                            media="(min-width: 480px)"
+                            />
+                            <img class="img-title" 
+                            src="images/img-team-1.jpg" 
+                            alt="команда">
+                        </picture>
                         <div class="team-name">
                             <h3 class="team-name__title">Игорь Демьяненко</h3>
                             <p class="team-name__text" lang="en">Product Designer</p>
@@ -165,11 +178,23 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img class="img-title" 
-                        src="images/img-team-2.jpg" 
-                        alt="команда"
-                        width="270"
-                        height="260">
+                        <picture>
+                            <source srcset="./images/img-team-2-1x.jpg 1x,
+                                ./images/img-team-2-2x.jpg 2x" 
+                            media="(min-width: 1200px)"
+                            />
+                            <source srcset="./images/img-team-2-tab-1x.jpg 1x,
+                                ./images/img-team-2-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)"
+                            />
+                            <source srcset="./images/img-team-2-mob-1x.jpg 1x,
+                                ./images/img-team-2-mob-2x.jpg 2x" 
+                            media="(min-width: 480px)"
+                            />
+                            <img class="img-title" 
+                            src="images/img-team-2.jpg" 
+                            alt="команда">
+                        </picture>
                         <div class="team-name">
                             <h3 class="team-name__title">Ольга Репина</h3>
                             <p class="team-name__text" lang="en">Frontend Developer</p>
@@ -206,11 +231,23 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img class="img-title" 
-                        src="images/img-team-3.jpg" 
-                        alt="команда"
-                        width="270"
-                        height="260">
+                        <picture>
+                            <source srcset="./images/img-team-3-1x.jpg 1x,
+                                ./images/img-team-3-2x.jpg 2x" 
+                            media="(min-width: 1200px)"
+                            />
+                            <source srcset="./images/img-team-3-tab-1x.jpg 1x,
+                                ./images/img-team-3-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)"
+                            />
+                            <source srcset="./images/img-team-3-mob-1x.jpg 1x,
+                                ./images/img-team-3-mob-2x.jpg 2x" 
+                            media="(min-width: 480px)"
+                            />
+                            <img class="img-title" 
+                            src="images/img-team-3.jpg" 
+                            alt="команда">
+                        </picture>
                         <div class="team-name">
                             <h3 class="team-name__title">Николай Тарасов</h3>
                             <p class="team-name__text" lang="en">Marketing</p>
@@ -247,11 +284,23 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img class="img-title" 
-                        src="images/img-team-4.jpg" 
-                        alt="команда"
-                        width="270"
-                        height="260">
+                        <picture>
+                            <source srcset="./images/img-team-4-1x.jpg 1x,
+                                ./images/img-team-4-2x.jpg 2x" 
+                            media="(min-width: 1200px)"
+                            />
+                            <source srcset="./images/img-team-4-tab-1x.jpg 1x,
+                                ./images/img-team-4-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)"
+                            />
+                            <source srcset="./images/img-team-4-mob-1x.jpg 1x,
+                                ./images/img-team-4-mob-2x.jpg 2x" 
+                            media="(min-width: 480px)"
+                            />
+                            <img class="img-title" 
+                            src="images/img-team-4.jpg" 
+                            alt="команда">
+                        </picture>
                         <div class="team-name">
                             <h3 class="team-name__title">Михаил Ермаков</h3>
                             <p class="team-name__text" lang="en">UI Designer</p>
@@ -339,7 +388,7 @@
                 </ul>
             </div>
         </section>
-        <footer class="footer">
+        <!-- <footer class="footer">
             <div class="container footer-container">
                 <div class="logo-container">
                     <a class="link logo footer__logo" href="" >Web<span class="footer__wite-logo">Studio</span> </a>

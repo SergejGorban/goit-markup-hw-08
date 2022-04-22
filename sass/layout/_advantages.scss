@@ -9,10 +9,6 @@
     }
 }
 
-.advantages-container {
-    padding: 0 15px;
-}
-
 .advantages-list__item {
     @include tab {
         width: 354px;
@@ -22,18 +18,16 @@
     }
 }
 
-.advantages-list__item:nth-child(odd) {
-    @include tab {
-        margin-right: 30px;
-    }
-}
-
-
 .advantages-list__item:not(:last-child) {
     margin-bottom: 30px;
     @include desk {
         margin-right: 30px;
         margin-bottom: 0;
+    }
+    @include tab {
+        &:nth-child(odd) {
+        margin-right: 30px;
+        }
     }
 }
 .advantages__box {

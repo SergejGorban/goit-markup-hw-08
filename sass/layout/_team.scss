@@ -15,7 +15,14 @@
 }
 
 .team-list {
-    display: flex;
+    display: block;
+    @include desk {
+        display: flex;
+    }
+    @include tab {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .team-list__item {
@@ -25,7 +32,24 @@
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
     &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    @include tab {
+        &:nth-child(odd) {
+            margin-right: 30px;
+        }
+        &:nth-child( n+2 ) {
+            margin-bottom: 0;
+        }
+        &:nth-child( -n+2 ) {
+            margin-bottom: 30px;
+        }
+    }
+    @include desk {
+        &:not(:last-child) {
         margin-right: 30px;
+        margin-bottom: 0;
+        }
     }
 }
 

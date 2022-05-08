@@ -4,12 +4,28 @@
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
+    display: block;
+    @include tab {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+    @include desk {
+        flex-wrap: nowrap;
+    }
 }
 
 .logo-container {
-    padding-right: 70px;
+    text-align: center;
+    padding-bottom: 60px;
+    @include tab {
+        padding-left: 66px;
+        padding-right: 165px;
+    }
+    @include desk {
+        padding: 0 70px 0 0;
+        margin-left: 0;
+    }
 }
 
 .footer__logo {
@@ -56,8 +72,16 @@
 }
 
 .social-container {
-    display: block;
-    justify-content: center;
+    text-align: center;
+    padding-bottom: 60px;
+    @include tab {
+        padding-bottom: 0;
+    }
+    @include desk {
+        display: block;
+        justify-content: center;
+    }
+    
 }
 
 .social-list {
@@ -94,7 +118,18 @@
 }
 
 .subscribe {
-    margin-left: 93px;
+    text-align: center;
+    @include tab {
+        margin: auto;
+    }
+    @include desk {
+        margin-left: 93px;
+    }
+    @include desk {
+        margin: 0;
+        text-align: start;
+        padding-left: 93px;
+    }
 }
 
 .subscribe__title {
@@ -102,14 +137,26 @@
     text-transform: uppercase;
     color: var(--btn-color);
     margin-bottom: 20px;
+    @include desk {
+        margin-bottom: 0;
+    }
 }
 
 .subscribe-label {
-    display: inline-flex;
+    display: block;
+    @include desk {
+        display: inline-flex;
+    }
 }
 
 .subscribe__input {
-    width: 358px;
+    width: 100%;
+    @include tab {
+        width: 450px;
+    }
+    @include desk {
+        width: 358px;
+    }
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
@@ -139,10 +186,15 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     display: inline-flex;
-    margin-left: 12px;
-    padding: 0;
+    margin-top: 20px;
+    @include desk {
+        margin-left: 12px;
+        padding: 0;
+    }
 }
 
 .subscribe__icon {
-    margin-left: 10px;
+    @include desk {
+        margin-left: 10px;
+    }
 }

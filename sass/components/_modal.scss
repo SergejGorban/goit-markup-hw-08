@@ -21,8 +21,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
+    // width: 528px;
+    // height: 581px;
     background-color: var(--btn-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 1px 1px rgba(0, 0, 0, 0.14), 
@@ -197,3 +199,4 @@
     color: var(--btn-color);
     padding: 0;
 }
+

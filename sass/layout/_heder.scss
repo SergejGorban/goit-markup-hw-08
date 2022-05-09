@@ -1,7 +1,15 @@
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #ECECEC;
+    @include tab {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    @include desk {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
 }
 
 .header-container {
@@ -9,15 +17,24 @@
 }
 
 .header__logo {
-    @include font (700, 26px, 1.19, 0.03em);
-    margin-right: 93px;
+    @include font (700, 24px, 1.17, 0.03em);
+    @include tab {
+        margin-right: 88px;
+    }
+    @include desk {
+        @include font (700, 26px, 1.19, 0.03em);
+        margin-right: 93px;
+    }
     font-family: Raleway;
     color: var(--accent-color);
 }
 
 .header__dark-logo {
     font-family: Raleway;
-    @include font (700, 26px, 1.19, 0.03em);
+    @include font (700, 24px, 1.17, 0.03em);
+    @include desk {
+        @include font (700, 26px, 1.19, 0.03em);
+    }
     color: var(--logo-color);
 }
 
@@ -43,6 +60,9 @@
         background: var(--accent-color);
         border-radius: 2px;
         bottom: -33px;
+        @include desk {
+            bottom: -34px;
+        }
     }
     &:focus, &:hover {
         color: var(--accent-color);
@@ -54,7 +74,10 @@
 }
 
 .contacts-list__link {
-    @include font (500, 14px, 1.14, 0.02em);
+    @include font (500, 12px, 1.17, 0.02em);
+    @include desk {
+        @include font (500, 14px, 1.14, 0.02em);
+    }
     @extend %center-list;
     justify-content: center;
     color: var(--text-color);
@@ -67,19 +90,73 @@
 }
 
 .contacts-list {
-    display: flex;
+    display: block;
+    
+    @include desk {
+        display: flex;
+    }
     margin-left: auto;
 }
 
 .contacts-list__item-mail {
-    margin-right: 30px;
+    margin-bottom: 10px;
+    @include desk {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+}
+
+.contacts-list__item-tel {
+    display: flex;
+    align-items: start;
 }
 
 .link-icon {
     fill: currentColor;
-    margin-right: 10px;
-    width: 16px;
-    height: 16px;
+    margin-right: 8px;
+    @include desk {
+        margin-right: 10px;
+    }
+}
+
+.tab-mail {
+    width: 14px;
+    height: 10px;
+    @include desk {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.tab-tel {
+    width: 10px;
+    height: 14px;
+    @include desk {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .site-nav {
+        display: none;
+    }
+    .contacts-list {
+        display: none;
+    }
+}
+
+.mob-open {
+    width: 40px;
+    height: 40px;
+    align-items: baseline;
+    justify-content: center;
+    border: none;
+    background-color: var(--btn-color);
+    margin-left: auto;
+    @include tab {
+        display: none;
+    }
 }
 
 .mob-menu {
@@ -90,6 +167,14 @@
     top: 0;
     left: 0;
     z-index: 1;
+    opacity: 1;
+    transition: opacity 250ms, visibility 250ms;
+}
+
+.mob-menu.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 
 .mob-container {

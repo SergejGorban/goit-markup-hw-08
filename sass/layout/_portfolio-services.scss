@@ -4,15 +4,7 @@
 }
 
 .services-item {
-    // margin-right: 30px;
-    // margin-bottom: 30px;
     display: block;
-    // &:nth-child( 3n + 3 ) {
-    //     margin-right: 0px;
-    // }
-    // &:nth-last-child(-n + 3) {
-    //     margin-bottom: 0;
-    // }
     &:not(:last-child) {
         margin-bottom: 30px;
     }
@@ -77,6 +69,9 @@
 }
 
 .title-text {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: contents;
+    }
     padding: 20px 24px;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;

@@ -3,7 +3,9 @@
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 480px;
+    @include mob {
+        max-width: 480px;
+    }
     @include tab {
         max-width: 768px;
     }

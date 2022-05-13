@@ -10,14 +10,17 @@
 }
 
 .clients-list {
-    display: flex;
-    flex-wrap: wrap;
+    @include mob {
+        display: flex;
+        flex-wrap: wrap;
+    }
     @include desk {
         flex-wrap: nowrap;
     }
 }
 
 .clients-list__link {
+    margin: 0 auto;
     width: 210px;
     height: 92px;
     border: 1px solid #AFB1B8;
@@ -39,11 +42,16 @@
 }
 
 .clients-list__item {
-    &:nth-child(2n+1) {
-        margin-right: 30px;
-    }
-    &:nth-child(-n+4) {
+    &:not(:last-child) {
         margin-bottom: 30px;
+    }
+    @include mob {
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+        &:nth-child(-n+4) {
+            margin-bottom: 30px;
+        }
     }
     @include tab {
         margin-right: 30px;
